@@ -18,6 +18,13 @@
 %
 function [traj, landmarks] = format_solution(x, n_poses, n_landmarks, p_dim, l_dim)
 
+x = x';
+ a = reshape(x,2,numel(x)/2);
+ a = a' ; 
+ 
+ traj = a(1:n_poses,:);
+ landmarks = a(n_poses+1:end , :);
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%% Your code goes here %%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

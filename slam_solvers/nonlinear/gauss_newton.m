@@ -31,6 +31,7 @@ epsilon1 = 1E-3;
 epsilon2 = 1E-2;
 
 x = x0;
+
 iter = 1;
 
 while (true)

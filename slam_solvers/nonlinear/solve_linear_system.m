@@ -15,3 +15,12 @@ function x = solve_linear_system(A, b)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%% Your code goes here %%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+[L,p,S] = chol((A'*A),'lower','matrix');
+
+bdash = S'*A'*b;
+z = forward_sub(L,bdash);
+y = back_sub(L', z);
+
+x = S*y;
+
+R = L';

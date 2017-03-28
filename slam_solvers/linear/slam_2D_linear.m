@@ -88,7 +88,7 @@ if strcmp(method, 'all')
     subplot(1,4,3); spy(R_qr1); title('QR1')
     subplot(1,4,4); spy(R_qr2); title('QR2')
     
-elseif strcmp(method, 'pinv')
+elseif strcmp(method, 'Pinv')
     x = solve_pinv(A, b);
     [traj, landmarks] = format_solution(x, n_poses, n_landmarks, o_dim, m_dim);
     evaluate_method('Pinv', traj, landmarks, odom, gt_traj, gt_landmarks, true);

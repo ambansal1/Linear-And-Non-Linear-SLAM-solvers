@@ -1,3 +1,4 @@
+
 % SOLVE_PINV
 % 16-831 Fall 2016 - *Stub* Provided
 % Solves linear system using pseudo-inverse
@@ -13,6 +14,8 @@
 %
 function x = solve_pinv(A, b)
 
+  x =   (inv(A'*A))*A'*b;
+  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%% Your code goes here %%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
